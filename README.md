@@ -1,2 +1,2 @@
 # projects
-My Python Portfolio Projects
+This is a list of my python projects.
