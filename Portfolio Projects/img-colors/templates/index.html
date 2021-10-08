@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a palette</title>
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Georama:wght@100;300;500&display=swap" rel="stylesheet">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar shadow-sm">
+        <div class="container-fluid">
+          <span class="navbar-brand mx-5 my-3 h1">ImagePalette</span>
+        </div>
+    </nav>
+    <div class="container px-3 py-5">
+        <form method="post" action="{{url_for('home')}}" enctype="multipart/form-data">
+            <label for="imageUpload" class="btn btn-primary btn-lg align-btns">Choose File</label>
+            <input type="file" name="image" id="imageUpload" style="display:none">
+            <input type="submit" class="btn-primary btn-lg align-btns submit-btn">
+        </form>
+<!--        <button type="button" class="btn btn-primary btn-lg">Choose File</button>-->
+        <div class="image-display"><img src={{showimage}} alt="Image will be shown here"></div>
+        <div class="palette">
+            {% for color in colors: %}
+            <div class="item text-center" style="background-color: {{color}};"><p>{{color}}</p></div>
+            {% endfor %}
+        </div>   
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-color: #3A2828;
+    color: white;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+}
+.nav-link, .table{
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    color: white;
+}
+.container-lg{
+    padding: 18em 0em;
+}
+.centre-heading{
+    font-weight: 700;
+}
+.btn{
+    color: #3A2828;
+    background-color: white;
+    border: white;
+    margin: 1em 0em;
+}
+.table td{
+    text-align: center;
+}
+.cafe-img, .map-url{
+    max-width: 15em;
+}
+.map-url{
+    overflow-wrap: break-word;
+}
+label{
+    font-size: 1.2em;
+    padding: 0.5em 0em;
+}
+.del-centre{
+    height: 45em;
+}
+footer{
+    padding: 1.2em 0em;
+}

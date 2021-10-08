@@ -1,0 +1,152 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Roboto", sans-serif;
+}
+h1,
+h2 {
+  margin: 0%;
+  text-align: center;
+  font-size: 8em;
+  font-weight: 900;
+}
+.container {
+  display: grid;
+  max-width: 100%;
+  padding: 0%;
+  grid-template-columns: 100%;
+  grid-template-rows: 6em 100% 6em;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "centre"
+    "footer";
+}
+/* Head section */
+.header {
+  position: relative;
+  background-color: #000000;
+}
+
+.header img {
+  height: 5em;
+  margin: 0.5em 6em;
+  background-color: #ffffff;
+}
+.header ul {
+  display: inline-block;
+  position: relative;
+  left: 65em;
+}
+.header li {
+  display: inline-block;
+  list-style: none;
+  margin: 0em 3em;
+}
+.navlinks {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.navlinks:hover {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+/* Centre content */
+.centre {
+  position: relative;
+}
+.top-title {
+  background-image: url("/images/home-back.jpg");
+  position: relative;
+  height: 52em;
+}
+.top-title-text {
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 32%;
+}
+.top-title-text h2 {
+  font-size: 2em;
+}
+.portfolio-content {
+  width: 60%;
+  margin: auto;
+  text-align: justify;
+  padding: 2em;
+  font-size: 1.2em;
+  font-weight: 100;
+}
+/* Contact page centre */
+.contact-back {
+  background-image: url("/images/contact-back.jpg");
+  height: 52em;
+}
+.contact-content {
+  width: 50%;
+  margin: auto;
+  padding: 2em;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+input[type="text"],
+textarea {
+  width: 100%;
+  margin: 0.5em 0em;
+  padding: 0.5em 1em;
+  border: 3px solid #ccc;
+  border-radius: 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+input[type="text"]:focus,
+textarea:focus {
+  border: 3px solid #555;
+}
+.btn {
+  border-radius: 0.5em;
+  font-size: 1em;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* Contact page centre end */
+.centre table {
+  border-collapse: separate;
+  border-spacing: 0 2em;
+}
+table tr td {
+  width: 50%;
+  padding: 1em;
+  position: relative;
+}
+.port-img {
+  width: 120%;
+}
+.short-summary {
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+}
+.short-summary h5 {
+  padding: 1%;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.short-summary p {
+  padding: 1% 20% 1% 1%;
+}
+/* Foot section */
+.footer {
+  position: relative;
+  background-color: #000000;
+}
+.footer-text {
+  display: inline-block;
+  position: relative;
+  top: 40%;
+  left: 48%;
+  color: #ffffff;
+}

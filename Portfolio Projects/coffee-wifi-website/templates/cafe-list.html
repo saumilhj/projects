@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee and WiFi</title>
+    <!-- Bootstrap -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item mx-5 my-3 h5">
+                <a class="nav-link" aria-current="page" href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item mx-5 my-3 h5">
+                <a class="nav-link" href="{{url_for('cafe_list')}}">Cafes</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="display-6 centre-heading">List of Cafes</h1>
+        <button type="button" class="btn btn-primary btn-md" onclick="location.href = '{{url_for('add')}}';">Add</button>
+        <button type="button" class="btn btn-primary btn-md" onclick="location.href = '{{url_for('delete')}}';">Delete</button>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td scope="col">#</td>
+                    <td scope="col">Name of Cafe</td>
+                    <td scope="col">Map Location</td>
+                    <td scope="col">Image</td>
+                    <td scope="col">Location</td>
+                    <td scope="col">Sockets</td>
+                    <td scope="col">Toilet</td>
+                    <td scope="col">WiFi</td>
+                    <td scope="col"> Take Calls</td>
+                    <td scope="col">Seats</td>
+                    <td scope="col">Coffee Price</td>
+                </tr>
+            </thead>
+            <tbody>
+            {% for cafe in cafes: %}
+                <tr>
+                    <td>{{cafe.id}}</td>
+                    <td>{{cafe.name}}</td>
+                    <td><p class="map-url">{{cafe.map_url}}</p></td>
+                    <td><a href="{{cafe.img_url}}" target="_blank"><img src="{{cafe.img_url}}" class="cafe-img"></a></td>
+                    <td>{{cafe.location}}</td>
+                    <td>{{cafe.has_sockets}}</td>
+                    <td>{{cafe.has_toilet}}</td>
+                    <td>{{cafe.has_wifi}}</td>
+                    <td>{{cafe.can_take_calls}}</td>
+                    <td>{{cafe.seats}}</td>
+                    <td>{{cafe.coffee_price}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+        <hr>
+    </div>
+    <footer>
+        <p class="text-center">Made with 🤍 2021</p>
+    </footer>
+    
+</body>
+</html>

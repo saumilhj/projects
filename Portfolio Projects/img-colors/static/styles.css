@@ -1,0 +1,41 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    font-family: 'Georama', sans-serif;
+}
+.navbar-brand{
+    font-size: 2em;
+    color: #5E16B0;
+}
+.palette{
+    display: flex;
+    flex-direction: row;
+}
+.item{
+    font-weight: 300;
+    height: 6em;
+    margin: 1%;
+    flex: 1 1 auto;
+}
+.item p{
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+.image-display{
+    background-color: #EAEAEA;
+    display:flex;
+    justify-content: center;
+    height: 30em;
+    width: 100%;
+    margin: 1em 0em;
+}
+.align-btns{
+    vertical-align: middle;
+    margin: 0em 2em;
+}
+.submit-btn{
+    border: none;
+    padding: 0.5em 1em;
+}
